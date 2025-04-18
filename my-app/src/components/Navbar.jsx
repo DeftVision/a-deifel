@@ -4,6 +4,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
@@ -21,8 +23,19 @@ const navLinks = [
     { label: 'Areas We Serve',  href: '#areas'  },
 ];
 
+const serviceAreas = [
+    "Salt Lake City",
+    "Utah County",
+    "Weber",
+    "St. George",
+    "Montana"
+]
+
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState(null)
+    const handleMenuOpen = (e) => setAnchorEl(e.currentTarget);
+    const handleMenuClose = () => setAnchorEl(null);
 
     const toggleDrawer = (state) => () => setOpen(state);
 
