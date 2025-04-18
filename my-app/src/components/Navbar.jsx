@@ -18,6 +18,7 @@ const navLinks = [
     { label: 'Services', href: '#services' },
     { label: 'About',    href: '#about'    },
     { label: 'Contact',  href: '#contact'  },
+    { label: 'Areas We Serve',  href: '#areas'  },
 ];
 
 export default function Navbar() {
