@@ -1,34 +1,38 @@
-
+// components/Contact.jsx
+import { Box, Typography, Container, TextField, Button, Stack } from '@mui/material';
 
 export default function Contact() {
     return (
-        <section id="contact" className="section">
-            <h2>Contact</h2>
+        <Box id="contact" sx={{ py: 8 }}>
+            <Container maxWidth="sm">
+                <Typography variant="h4" component="h2" gutterBottom>
+                    Contact
+                </Typography>
 
-            <form
-                className="contact__form"
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    alert('Thanks! We will be in touch soon.');
-                }}
-            >
-                <label>
-                    Name
-                    <input type="text" placeholder="Your name" required />
-                </label>
-
-                <label>
-                    Email
-                    <input type="email" placeholder="you@example.com" required />
-                </label>
-
-                <label>
-                    Message
-                    <textarea rows="4" placeholder="Tell us about your project…" />
-                </label>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+                <Box
+                    component="form"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        alert('Thanks! We will be in touch soon.');
+                    }}
+                >
+                    <Stack spacing={2}>
+                        <TextField label="Name" name="name" fullWidth required />
+                        <TextField label="Email" type="email" name="email" fullWidth required />
+                        <TextField
+                            label="Message"
+                            name="message"
+                            fullWidth
+                            multiline
+                            rows={4}
+                            placeholder="Tell us about your project…"
+                        />
+                        <Button type="submit" variant="contained">
+                            Send Message
+                        </Button>
+                    </Stack>
+                </Box>
+            </Container>
+        </Box>
     );
 }
