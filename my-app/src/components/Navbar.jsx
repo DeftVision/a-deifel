@@ -1,44 +1,51 @@
 // src/components/Navbar.jsx
 import { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+import {
+    AppBar,
+    Toolbar,
+    Box,
+    Typography,
+    Button,
+    IconButton,
+    Drawer,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText,
+    Menu,
+    MenuItem,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Box from '@mui/material/Box';
 import logo from '../assets/Logo.png';
 
+/* ───── static data ───── */
 const navLinks = [
     { label: 'Services', href: '#services' },
     { label: 'About',    href: '#about'    },
     { label: 'Contact',  href: '#contact'  },
-    { label: 'Areas We Serve',  href: '#areas'  },
 ];
 
 const serviceAreas = [
-    "Salt Lake City",
-    "Utah County",
-    "Weber",
-    "St. George",
-    "Montana"
-]
+    'Salt Lake City',
+    'Utah County',
+    'Weber',
+    'St. George',
+    'Montana',
+];
 
+/* ───── component ───── */
 export default function Navbar() {
-    const [open, setOpen] = useState(false);
-    const [anchorEl, setAnchorEl] = useState(null)
-    const handleMenuOpen = (e) => setAnchorEl(e.currentTarget);
-    const handleMenuClose = () => setAnchorEl(null);
+    /* drawer (mobile) */
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleDrawer = (state) => () => setDrawerOpen(state);
 
-    const toggleDrawer = (state) => () => setOpen(state);
+    /* dropdown menu (desktop) */
+    const [areasAnchor, setAreasAnchor] = useState(null);
+    const areasOpen = Boolean(areasAnchor);
+    const handleAreasOpen  = (e) => setAreasAnchor(e.currentTarget);
+    const handleAreasClose = () => setAreasAnchor(null);
 
+    /* desktop links */
     const DesktopLinks = () => (
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
             {navLinks.map(({ label, href }) => (
@@ -46,28 +53,61 @@ export default function Navbar() {
                     {label}
                 </Button>
             ))}
+
+            {/* Areas We Serve trigger */}
+            <Button
+                id="areas-btn"
+                color="inherit"
+                aria-controls={areasOpen ? 'areas-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={areasOpen ? 'true' : undefined}
+                onClick={handleAreasOpen}
+            >
+                Areas&nbsp;We&nbsp;Serve
+            </Button>
+
+            {/* dropdown menu */}
+            <Menu
+                id="areas-menu"
+                anchorEl={areasAnchor}
+                open={areasOpen}
+                onClose={handleAreasClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                transformOrigin={{ vertical: 'top',    horizontal: 'left' }}
+                sx={{ mt: 1 }}
+            >
+                {serviceAreas.map((area) => (
+                    <MenuItem key={area} onClick={handleAreasClose}>
+                        {area}
+                    </MenuItem>
+                ))}
+            </Menu>
         </Box>
     );
 
+    /* mobile links */
     const MobileLinks = () => (
-        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-            <List sx={{ width: 200 }}>
-                {navLinks.map(({ label, href }) => (
-                    <ListItem key={label} disablePadding onClick={toggleDrawer(false)}>
-                        <ListItemButton component="a" href={href}>
-                            <ListItemText primary={label} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+        <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <List sx={{ width: 220 }}>
+                {[...navLinks, { label: 'Areas We Serve', href: '#areas' }].map(
+                    ({ label, href }) => (
+                        <ListItem key={label} disablePadding onClick={toggleDrawer(false)}>
+                            <ListItemButton component="a" href={href}>
+                                <ListItemText primary={label} />
+                            </ListItemButton>
+                        </ListItem>
+                    )
+                )}
             </List>
         </Drawer>
     );
 
     return (
         <>
+            {/* ── top bar ── */}
             <AppBar position="sticky" color="default" elevation={1}>
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    {/* Brand */}
+                    {/* brand/logo */}
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                         <Box
                             component="img"
@@ -75,15 +115,14 @@ export default function Navbar() {
                             alt="4Ever Concrete Coatings"
                             sx={{ width: 40, height: 'auto' }}
                         />
-                        <Typography variant="h6" component="span" sx={{ fontWeight: 700 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 700 }}>
                             4Ever Concrete Coatings
                         </Typography>
                     </Box>
 
-                    {/* Desktop links */}
                     <DesktopLinks />
 
-                    {/* Burger (mobile) */}
+                    {/* burger (mobile) */}
                     <IconButton
                         edge="end"
                         color="inherit"
@@ -96,7 +135,7 @@ export default function Navbar() {
                 </Toolbar>
             </AppBar>
 
-            {/* Drawer */}
+            {/* mobile drawer */}
             <MobileLinks />
         </>
     );
