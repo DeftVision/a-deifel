@@ -12,7 +12,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Box from '@mui/material/Box';
-import logo from '../assets/4Ever Concrete Coatings Logo.png';
+import logo from '../assets/Logo.png';
 
 const navLinks = [
     { label: 'Services', href: '#services' },
