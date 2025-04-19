@@ -1,18 +1,24 @@
 // components/Services.jsx
 import { Box, Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
-import s1 from '../assets/21.png';
+import s1 from '../assets/1.jpg';
 import s2 from '../assets/22.png';
 import s3 from '../assets/23.png';
-import s4 from '../assets/21.png';
+import s4 from '../assets/20.png';
 
 const data = [
-    { img: s1, title: 'Flake Garage Floors', text: '' },
-    { img: s2, title: 'Stamped Concrete Sealing', text: '' },
-    { img: s3, title: 'Decorative Overlays', text: '' },
+    { img: s1, title: 'Flake Garage Floors', text: 'Perfect for use on old or new concrete, vinyl chip epoxy and polyaspartic garage ' +
+            'floors offer unlimited design capabilities that transform ordinary concrete into a limitless palette of color and design.' },
+    { img: s2, title: 'Stained & Dyed Coatings', text: 'Stains and dyes penetrate deep into the pores to create beautiful, ' +
+            'unique tones in existing concrete, and are sealed so they last for years.  Stained concrete is perfect for basements, ' +
+            'patios, porches, sidewalks, garages, and commercial floors.' },
+    { img: s3, title: 'Decorative Overlays', text: 'Sprayed concrete overlay systems are designed to transform ordinary concrete ' +
+            'into bold and exciting textured surfaces. Perfect for pool decks, patios, porches and other areas.' },
     {
         img: s4,
         title: 'Metallic Coatings',
-        text: 'Metallic epoxy creates a completely custom...'
+        text: 'Metallic epoxy creates a completely custom, one-of-a-kind look for your surface.  It is incredibly durable, completely unique and eye-popping.  ' +
+            'You can turn a garage into a literal showroom.  ' +
+            'Perfect for residential and commercial spaces, including basements, garages, showrooms, bathrooms, kitchens, entryways and lobbies.'
     },
 ];
 
