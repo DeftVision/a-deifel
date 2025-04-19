@@ -1,6 +1,7 @@
-// components/Hero.jsx
-import { Box, Typography, Button, Container } from '@mui/material';
-import heroFloor from '../assets/13.png';
+// src/components/Hero.jsx
+import { Box, Typography, Button, Container, Stack } from '@mui/material';
+import heroFloor from '../assets/1.jpg';
+import logo from '../assets/Logo.png'; // Update if logo filename changes
 
 export default function Hero() {
     return (
@@ -8,27 +9,64 @@ export default function Hero() {
             id="top"
             sx={{
                 position: 'relative',
-                height: { xs: '20vh', md: '40vh' },
-                color: 'white',
+                minHeight: { xs: '70vh', md: '85vh' },
                 backgroundImage: `url(${heroFloor})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
                 alignItems: 'center',
-                textAlign: 'center',
+                py: { xs: 4, md: 8 },
+                color: 'white',
             }}
         >
-            <Container maxWidth="md" sx={{ backgroundColor: 'rgba(0,0,0,0.5)', p: 4, borderRadius: 2 }}>
-                <Typography variant="h2" sx={{ mb: 2 }}>
-                    We bring your concrete to life
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 3 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam libero risus, aliquet non commodo at.
-                </Typography>
-                <Button href="#services" variant="contained" color="primary">
-                    Our Services
-                </Button>
-            </Container>
+            <Box sx={{ width: '100%', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                <Container maxWidth="lg">
+                    <Stack
+                        direction={{ xs: 'column', md: 'row' }}
+                        spacing={{ xs: 4, md: 8 }}
+                        alignItems="center"
+                        justifyContent="space-between"
+                    >
+                        {/* Logo */}
+                        <Box
+                            component="img"
+                            src={logo}
+                            alt="4Ever Concrete Coatings"
+                            sx={{
+                                maxWidth: { xs: 140, md: 260 },
+                                height: 'auto',
+                                mx: { xs: 'auto', md: 0 },
+                                filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3))',
+                            }}
+                        />
+
+                        {/* Heading & CTA */}
+                        <Box sx={{ flex: 1 }}>
+                            <Typography
+                                variant="h2"
+                                sx={{
+                                    fontSize: {
+                                        xs: '2rem',
+                                        sm: '2.5rem',
+                                        md: '3rem',
+                                        lg: '3.5rem',
+                                    },
+                                    mb: 3,
+                                    textAlign: { xs: 'center', md: 'left' },
+                                    fontWeight: 600,
+                                }}
+                            >
+                                We bring your concrete to life.
+                            </Typography>
+                            <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                                <Button href="#services" variant="contained" color="primary">
+                                    Our Services
+                                </Button>
+                            </Box>
+                        </Box>
+                    </Stack>
+                </Container>
+            </Box>
         </Box>
     );
 }
