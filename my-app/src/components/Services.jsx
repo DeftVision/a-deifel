@@ -24,7 +24,7 @@ const data = [
 
 export default function Services() {
     return (
-        <Box id="services" sx={{ py: 8 }}>
+        <Box id="services" sx={{ scrollMarginTop: '80px', py: 8 }}>
             <Container>
                 <Typography variant="h4" component="h2" gutterBottom>
                     Services
