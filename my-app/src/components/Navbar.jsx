@@ -63,6 +63,18 @@ export default function Navbar() {
                                 ))}
                             </Menu>
                         </Box>
+                        <Typography
+                            variant="body2"
+                            sx={{
+                                ml: 3,
+                                display: { xs: 'none', md: 'block' },
+                                whiteSpace: 'nowrap'
+                            }}
+                        >
+                            <a href="tel:+13852124776" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                (385) 212-4776
+                            </a>
+                        </Typography>
                     </Box>
 
                     {/* Mobile Menu */}
