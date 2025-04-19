@@ -12,7 +12,7 @@ const navLinks = [
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
 ];
-const serviceAreas = ['Phoenix', 'Mesa', 'Scottsdale', 'Tempe', 'Chandler'];
+const serviceAreas = ['Salt Lake City', 'Utah County', 'Weber County', 'St. George', 'Montana'];
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);

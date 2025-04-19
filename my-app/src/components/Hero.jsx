@@ -1,6 +1,6 @@
 // components/Hero.jsx
 import { Box, Typography, Button, Container } from '@mui/material';
-import heroFloor from '../assets/1.jpg';
+import heroFloor from '../assets/13.png';
 
 export default function Hero() {
     return (
@@ -8,7 +8,7 @@ export default function Hero() {
             id="top"
             sx={{
                 position: 'relative',
-                height: { xs: '60vh', md: '80vh' },
+                height: { xs: '20vh', md: '40vh' },
                 color: 'white',
                 backgroundImage: `url(${heroFloor})`,
                 backgroundSize: 'cover',
