@@ -17,7 +17,7 @@ export default function Contact() {
                     }}
                 >
                     <Stack spacing={2}>
-                        <TextField label="Name" name="name" fullWidth required />
+                        <TextField label="Name" name="name" fullWidth required  />
                         <TextField label="Email" type="email" name="email" fullWidth required />
                         <TextField
                             label="Message"

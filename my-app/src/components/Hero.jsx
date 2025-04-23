@@ -1,7 +1,7 @@
 // src/components/Hero.jsx
 import { Box, Typography, Button, Container, Stack } from '@mui/material';
 import heroFloor from '../assets/1.jpg';
-import logo from '../assets/Logo.png'; // Update if logo filename changes
+import logo from '../assets/full-logo-transparent.png';
 
 export default function Hero() {
     return (
@@ -9,7 +9,7 @@ export default function Hero() {
             id="top"
             sx={{
                 position: 'relative',
-                minHeight: { xs: '70vh', md: '85vh' },
+                minHeight: { xs: '45vh' },
                 backgroundImage: `url(${heroFloor})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -19,7 +19,7 @@ export default function Hero() {
                 color: 'white',
             }}
         >
-            <Box sx={{ width: '100%', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+            <Box sx={{ width: '100%', py: 2, backgroundColor: 'rgb(0,0,0)' }}>
                 <Container maxWidth="lg">
                     <Stack
                         direction={{ xs: 'column', md: 'row' }}
@@ -35,7 +35,7 @@ export default function Hero() {
                             sx={{
                                 maxWidth: { xs: 140, md: 260 },
                                 height: 'auto',
-                                mx: { xs: 'auto', md: 0 },
+                                mx: { xs: 'auto' },
                                 filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3))',
                             }}
                         />

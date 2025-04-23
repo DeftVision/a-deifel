@@ -1,6 +1,6 @@
 // components/Navbar.jsx
 import { useState } from 'react';
-import logo from '../assets/Logo.png';
+import logo from '../assets/full-Logo-transparent.png';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
     AppBar, Toolbar, Drawer, Button, IconButton, Menu, Typography,
@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <>
-            <AppBar position="sticky" color="default" elevation={1}>
+            <AppBar position="sticky" elevation={1}>
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
                     {/* Logo + Brand */}
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
