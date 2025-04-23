@@ -9,16 +9,9 @@ export default function About() {
                     About Us
                 </Typography>
                 <Typography variant="body1">
-                    Can you think of a favorite memory, either recently or from years ago?
-                    Where are you?  Who is with you?
-                    How do you feel now, thinking about it?
-                    Some of our favorite memories are often at home, or in the home of a friend or loved one.
-                    Your home isn't just a living space, it's how you feel.
-                    We often neglect spaces like our garage, basement, porch, patio, driveway, etc., but those spaces aren't just extensions of our home, they are a part of it.
-                    Why not turn them into spaces that actually make you FEEL at home?  Spaces you love to look at and hang out in and make you feel good?
-                    4Ever Concrete Coatings transforms lifeless residential and commercial surfaces into something beautiful and unique,
-                    which adds tremendous value while making your space feel more like, well, home.
-                    We provide high-quality service that lasts for many, many years, and guarantee our work to your complete satisfaction.
+                    4Ever Concrete Coatings transforms neglected surfaces, like garage floors, basements, patios, driveways, commercial floors, etc. into vibrant, beautiful spaces that make
+                    you FEEL good and bring tremendous VALUE to your home or business.   At 4Ever Concrete Coatings, we bring your concrete to life by providing high-quality service that lasts for many,
+                    many years.  We also guarantee our work to your complete satisfaction, as our only goal is to make you happy.  After all, home is much more than just the space where we live, it's how we feel.
                 </Typography>
             </Container>
         </Box>
