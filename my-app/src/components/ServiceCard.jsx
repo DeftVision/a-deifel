@@ -34,7 +34,7 @@ export default function ServiceCard({ title, text, img }) {
                 </Box>
 
                 {text.length > 100 && (
-                    <Button onClick={() => setExpanded(!expanded)} size="small" sx={{ mt: 1 }}>
+                    <Button onClick={() => setExpanded(!expanded)} size="small" sx={{ mt: 1, color: 'text.primary' }}>
                         {expanded ? 'Show Less' : 'Read More'}
                     </Button>
                 )}
