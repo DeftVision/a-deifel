@@ -19,7 +19,7 @@ export default function Hero() {
                 color: 'white',
             }}
         >
-            <Box sx={{ width: '100%', py: 2, backgroundColor: 'rgba(0,0,0,0.5)' }}>
+            <Box sx={{ width: '100%', py: 2, backgroundColor: 'rgb(0,0,0)' }}>
                 <Container maxWidth="lg">
                     <Stack
                         direction={{ xs: 'column', md: 'row' }}
