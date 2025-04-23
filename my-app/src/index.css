@@ -9,3 +9,26 @@ html {
     height: 30vh !important;   /* temp */
 }
 
+/* Contact section – dark-mode tweaks */
+.contact__form label {
+    color: #ffffff;                       /* white label text */
+}
+
+.contact__form input,
+.contact__form textarea {
+    background: transparent;              /* no white boxes */
+    border: 1px solid #ffffff;            /* white outline */
+    color: #ffffff;                       /* white user text */
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);      /* softer white hint */
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+    outline: 2px solid #ffffff;           /* optional focus ring */
+}
+
+

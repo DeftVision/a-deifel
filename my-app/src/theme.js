@@ -7,6 +7,16 @@ const theme = createTheme({
         text: { primary: '#fff' },
         primary: { main: '#425054'}
     },
+
+    components: {
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: '#425054'
+                }
+            }
+        }
+    }
 });
 
 export default theme;

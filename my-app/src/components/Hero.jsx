@@ -31,12 +31,12 @@ export default function Hero() {
                         <Box
                             component="img"
                             src={logo}
-                            alt="4Ever Concrete Coatings"
+                            alt="4Ever Concrete Coatings!"
                             sx={{
                                 maxWidth: { xs: 140, md: 260 },
                                 height: 'auto',
                                 mx: { xs: 'auto' },
-                                filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3))',
+                                // filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3))',
                             }}
                         />
 
