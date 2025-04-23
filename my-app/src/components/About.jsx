@@ -3,7 +3,7 @@ import { Box, Typography, Container } from '@mui/material';
 
 export default function About() {
     return (
-        <Box id="about" sx={{ py: 8, bgcolor: '#f4f4f4' }}>
+        <Box id="about" sx={{ py: 8 }}>
             <Container maxWidth="md">
                 <Typography variant="h4" component="h2" gutterBottom>
                     About Us

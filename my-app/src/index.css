@@ -1,3 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+
+.hero {
+    outline: 5px dashed lime;
+    height: 30vh !important;   /* temp */
+}
+
