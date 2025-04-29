@@ -1,6 +1,6 @@
 // components/Navbar.jsx
 import { useState } from 'react';
-import logo from '../assets/full-Logo-transparent.png';
+import logo from '../assets/full-logo-transparent.png';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
     AppBar, Toolbar, Drawer, Button, IconButton, Menu, Typography,
