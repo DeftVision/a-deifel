@@ -24,11 +24,6 @@ export default function Contact() {
         );
 
         e.target.reset(); // Clear the form after sending
-
-        console.log('Service ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-        console.log('Template ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-        console.log('Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
     };
 
     return (
