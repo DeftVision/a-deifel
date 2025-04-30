@@ -98,6 +98,11 @@ export default function Navbar() {
                             </ListItemButton>
                         </ListItem>
                     ))}
+                    <ListItem>
+                        <a href="tel:+13852124776" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            (385) 212-4776
+                        </a>
+                    </ListItem>
                     <ListItem><ListItemText primary="Service Areas" /></ListItem>
                     {serviceAreas.map((area) => (
                         <ListItem key={area} disablePadding>
@@ -106,6 +111,7 @@ export default function Navbar() {
                             </ListItemButton>
                         </ListItem>
                     ))}
+
                 </List>
             </Drawer>
         </>
