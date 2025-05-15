@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import { Box, Typography, Button, Container, Stack } from '@mui/material';
-import heroFloor from '../assets/1.jpg';
+import heroFloor from '../assets/1.webp';
 import logo from '../assets/full-logo-transparent.png';
 
 export default function Hero() {
