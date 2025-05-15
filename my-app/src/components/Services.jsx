@@ -2,10 +2,10 @@
 import { Box, Typography } from '@mui/material';
 import ServiceCard from './ServiceCard';
 
-import s1 from '../assets/1.jpg';
-import s2 from '../assets/22.png';
-import s3 from '../assets/23.png';
-import s4 from '../assets/20.png';
+import s1 from '../assets/1.webp';
+import s2 from '../assets/22.webp';
+import s3 from '../assets/23.webp';
+import s4 from '../assets/20.webp';
 
 const services = [
     {
